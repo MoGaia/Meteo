@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--controllo-->
+
+<head>
+    <meta charset=UTF-8">
+    <!--set di caratteri-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--controlla ridimensionamento della pagina-->
+    
+    <title>Esercizio HTML</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #DBE6FD;
+
+        }
+
+        /* Header - scritta */
+        .header {
+            background: url(terra.jpg) no-repeat fixed center;
+            padding: 30px;
+            text-align: center;
+            font-size: 25px;
+            color: #e9eefb;
+            background-size: 100vw 120vh;
+        }
+
+        /* Navbar */
+        .topnav {
+            overflow: hidden;
+            background-color: #293B5F;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Links navbar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #ebeffa;
+            text-align: center;
+            padding: 15px 30px;
+            text-decoration: none;
+        }
+
+        /* Colore mouse */
+        .topnav a:hover {
+            background-color: #ebeffa;
+            color: #293B5F;
+        }
+
+        /* Colonne */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 420px;
+        }
+
+        /* Clear floats after the columns CONTROLLO*/
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*Immagine*/
+        #div {
+            width: auto;
+            height: 400px;
+        }
+
+        #div img {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        p.text {
+            text-align: justify;
+        }
+
+        .h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9eefb;
+        }
+
+        /*Passaggio mouse su UR*/
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Posizione tooltip */
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            right: 100%;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+
+        /* Footer */
+        .left {
+            text-align: left;
+            float: left;
+        }
+
+        .right {
+            float: right;
+            text-align: right;
+        }
+
+        .centered {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Meteo</h2>
+    </div>
+    <div class="topnav">
+        <a href="Sito.html">Home</a>
+        <a href="Contatti.html" target="_blank">Contatti</a>
+        <a href="#">Torna su</a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div id="div"><img src="torino.jpg" alt="Torino"></div>
+        </div>
+    
+        <div class="column">
+            <p class="text" style="">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non quam ut arcu aliquam placerat. Maecenas
+                elit lectus, malesuada ac congue id, pretium vel dui. Proin interdum ipsum molestie sapien fermentum
+                semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce
+                ultrices, libero tincidunt rhoncus ornare, leo ex ullamcorper eros, a blandit ante diam at sapien. Nulla
+                vestibulum aliquam dolor vitae lacinia. Nulla hendrerit tellus id odio consequat volutpat. Vestibulum
+                lorem dolor, sodales sed odio at, pellentesque sodales magna.
+                Duis sit amet blandit ligula. Donec vestibulum suscipit mauris, sit amet luctus sapien dapibus lacinia.
+                Nulla ac ex vitae erat elementum convallis id quis lorem. Duis risus nunc, mollis malesuada mattis ac,
+                tincidunt in erat. Aliquam porta, felis dapibus gravida faucibus, lectus elit tristique nunc, nec
+                commodo felis lorem mollis risus. In ultricies ligula quis metus malesuada commodo. Etiam placerat
+                sapien tellus, non ullamcorper est semper id. Integer luctus tellus ac blandit cursus. Aliquam auctor
+                elementum laoreet. Fusce in risus pretium purus lacinia placerat sed quis metus. Ut suscipit augue nec
+                ligula tincidunt facilisis.
+                Fusce malesuada sapien id lectus hendrerit lacinia. Sed et ultrices turpis. Sed eget eros molestie leo
+                mollis varius. Maecenas purus purus, cursus vel accumsan a, pharetra sit amet elit. Suspendisse at nibh
+                massa. Aenean vitae hendrerit odio. Suspendisse lobortis lectus tellus, id tempus urna luctus ut. Nunc
+                eu tempus massa, non ultrices quam. Integer maximus sit amet erat ut mattis. Fusce ac lobortis lorem.
+                Morbi mollis urna est, a sagittis erat porta vitae.
+            </p>
+        </div>
+    
+    </div>
+    
+    <div class="row">
+        <h2 class="h2">Tabella Meteo Torino</h2>
+    <table class="meteo">
+        <tbody>
+            <tr>
+                <th>ORA</th>
+                <th>TEMPO</th>
+                <th>T(C&deg;)</th>
+                <th>VENTO(km/h)</th>
+                <th>PRECIPITAZIONI</th>
+                <th>QUOTA 0&deg;C</th>
+                <th>VISIBILIT&Agrave;</th>
+                <th>
+                    <div class="tooltip">U.R.
+                        <span class="tooltiptext">Umidit&agrave; Relativa</span>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img src="nuv.jpg">Nubi sparse</td>
+                <td>3.7&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(90deg);">W 4&sol;6<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1880m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>96&percnt;</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="nuv.jpg">Nubi sparse</td>
+                <td>3.1&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(100deg);">WNW 4&sol;8<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1660m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>97&percnt;</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><img src="nuv.jpg">Nubi sparse</td>
+                <td>1.7&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(100deg);">WNW 5&sol;8<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1670m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>97&percnt;</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><img src="sole.jpg">Sereno</td>
+                <td>4.6&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(100deg);">WNW 6&sol;7<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1620m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>92&percnt;</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><img src="sole.jpg">Sereno</td>
+                <td>8.1&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(100deg);">WNW 5&sol;7<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1610m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>82&percnt;</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><img src="sole.jpg">Sereno</td>
+                <td>7.9&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(130deg);">WNW 5&sol;10<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1560m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>92&percnt;</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td><img src="luna.jpg">Sereno</td>
+                <td>3.9&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(140deg);">NW 9&sol;18<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1470m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>92&percnt;</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td><img src="luna.jpg">Sereno</td>
+                <td>2.3&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(170deg);">NNW 12&sol;23<br>debole</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1340m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>82&percnt;</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img src="luna.jpg">Sereno</td>
+                <td>0.5&deg;</td>
+                <td><img src="vento.jpg" style="transform:rotate(170deg);">NNW 12&sol;23<br>moderato</td>
+                <td>&ndash;assenti&ndash;</td>
+                <td>1200m</td>
+                <td>&gt;10km<br>buona</td>
+                <td>73&percnt;</td>
+            </tr>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <div id="footer">
+        <p class="left">Su di noi</p>
+        <p class="right">Privacy</p>
+        <p class="centered">Copyright © Gaia Mortarotti.</p>
+    </div>
+
+</body>
+
+</html>

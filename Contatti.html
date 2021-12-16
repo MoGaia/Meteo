@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--controllo-->
+
+<head>
+    <meta charset=UTF-8">
+    <!--set di caratteri-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--controlla ridimensionamento della pagina-->
+
+    <title>Contatti</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #DBE6FD;
+
+        }
+
+        /* Header - scritta */
+        .header {
+            background: #DBE6FD;
+            padding: 15px;
+            text-align: center;
+            font-size: 25px;
+            color: #293B5F;
+        }
+
+        /* Navbar */
+        .topnav {
+            overflow: hidden;
+            background-color: #293B5F;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Links navbar */
+        .topnav a {
+            float: right;
+            display: block;
+            color: #ebeffa;
+            text-align: center;
+            padding: 15px 30px;
+            text-decoration: none;
+        }
+
+        /* Colore mouse */
+        .topnav a:hover {
+            background-color: #ebeffa;
+            color: #293B5F;
+        }
+
+        /* Colonne */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+
+        }
+
+        /* Clear floats after the columns CONTROLLO*/
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        /*CONTROLLO*/
+        div,
+        input,
+        select,
+        textarea,
+        label {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-size: 15px;
+
+        }
+
+        /*Dimensione campi*/
+        input,
+        select,
+        textarea {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input {
+            width: calc(50% - 10px);
+            padding: 15px;
+        }
+
+        /*Passaggio mouse sui campi*/
+        .item input:hover,
+        .item textarea:hover {
+            border: 1px solid transparent;
+            box-shadow: 0 0 3px 0 #669999;
+            color: #669999;
+        }
+
+
+        /*Dimensione box compila*/
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            padding: 20px;
+        }
+
+        /*Area richiesta*/
+        textarea {
+            width: calc(100% - 20px);
+            padding: 12px;
+        }
+
+        /*Per non allungare la textarea*/
+        textarea {
+            resize: none;
+        }
+
+        /*Pulsante*/
+        .btn-block {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #293B5F;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /*Passaggio mouse pulsante*/
+        button:hover {
+            background: #a3c2c2;
+        }
+
+        /*CONTROLLO*/
+        label {
+            color: gray;
+        }
+
+        /*Contatti*/
+        .column2 {
+            background-size: cover;
+            border-radius: 12px 12px 12px 12px;
+            border-width: 1px 1px 1px 1px;
+            border-color: #fff;
+            border-style: solid;
+            overflow: hidden;
+            box-shadow: 0px 10px 51px 3px rgba(0, 0, 0, 0.15);
+            padding: 20px 20px;
+
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            margin-top: -100px;
+            margin-left: -100px;
+
+        }
+
+        .content {
+            font-size: 18px;
+            color: #293B5F;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        /* Footer */
+        .left {
+            text-align: left;
+            float: left;
+        }
+
+        .right {
+            float: right;
+            text-align: right;
+        }
+
+        .centered {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="#">Torna su</a>
+        <a href="Sito.html" target="_blank">Home</a>
+    </div>
+    <div class="header">
+        <h2>Contatti</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="textbox">
+                <div class="item">
+                    <input id="name" type="text" name="name" placeholder="Nome" size="40" required />
+                    <input id="eaddress" type="text" name="eaddress" placeholder="E-mail" size="40" required />
+                </div>
+                <div class="item">
+                    <input id="phone" type="tel" name="phone" placeholder="Telefono" size="40" required />
+                    <input id="obj" type="text" name="obj" placeholder="Oggetto" size="40" required />
+                </div>
+                <div class="item">
+                    <textarea id="visit" rows="8" placeholder="La tua richiesta" size="40"></textarea>
+                </div>
+            </div>
+            <label><input type="checkbox" name="accept">Dichiaro di avere preso attenta visione
+                <a href="" target="_blank">dell’informativa sulla privacy</a>
+                e presto il consenso al trattamento dei miei dati personali per le
+                finalità al suo interno ex. Artt. 13-14 Reg.to UE 2016/679
+            </label>
+            <div class="btn-block">
+                <button type="submit" href="/">Submit</button>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="box">
+                <h3 class="content">RECAPITI</h3>
+
+                <ul class="">
+                    <li class="">
+                        <div class="content">
+                            <p>contatti@contatti.it</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="content">
+                            <p>0123456789</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="content">
+                            <a href="">Clicca per Whatsapp</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="left">Su di noi</p>
+        <p class="right">Privacy</p>
+        <p class="centered">Copyright © Gaia Mortarotti.</p>
+    </div>
+</body>
+
+</html>
