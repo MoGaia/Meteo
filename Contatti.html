@@ -3,12 +3,11 @@
 <!--controllo-->
 
 <head>
-    <meta charset=UTF-8">
+    <meta charset="UTF-8">
     <!--set di caratteri-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--controlla ridimensionamento della pagina-->
-    <!--controlla ridimensionamento della pagina-->
-    <title>Contatti</title> 
+    <title>Contatti</title>
 
     <style>
         * {
@@ -187,6 +186,48 @@
             list-style-type: none;
         }
 
+        /*Qui ho provato ad usare un float:left per affiancare i 2 div*/
+        .container {
+           position: relative;
+           width: 40%; 
+          
+        }
+
+        /*Immagini hoverlay*/
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #293B5F;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
         /* Footer */
         .left {
             text-align: left;
@@ -261,6 +302,23 @@
             </div>
         </div>
     </div>
+<br>
+    <div class="container">
+        <img src="torino.jpg" alt="Torino" class="image">
+        <div class="overlay">
+            <div class="text">SEDE OPERATIVA DI TORINO
+                Lungo Dora Pietro Colletta, 81 - 10153 Torino</div>
+        </div>
+    </div>
+    <div class="container">
+        <img src="milano.jpg" alt="Milano" class="image">
+        <div class="overlay">
+            <div class="text">SEDE OPERATIVA DI MILANO
+                Centro Polifunzionale Torri Bianche Palazzo Quercia
+                Via Torri Bianche 9 20871 Vimercate (MB)</div>
+        </div>
+    </div>
+
     <div id="footer">
         <p class="left">Su di noi</p>
         <p class="right">Privacy</p>
