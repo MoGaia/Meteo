@@ -1,0 +1,139 @@
+  * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #DBE6FD;
+
+        }
+
+        /* Header - scritta */
+        .header {
+            background: url(terra.jpg) no-repeat fixed center;
+            padding: 30px;
+            text-align: center;
+            font-size: 25px;
+            color: #e9eefb;
+            background-size: 100vw 120vh;
+        }
+
+        /* Navbar */
+        .topnav {
+            overflow: hidden;
+            background-color: #293B5F;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Links navbar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #ebeffa;
+            text-align: center;
+            padding: 15px 30px;
+            text-decoration: none;
+        }
+
+        /* Colore mouse */
+        .topnav a:hover {
+            background-color: #ebeffa;
+            color: #293B5F;
+        }
+
+        /* Colonne */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 420px;
+        }
+
+        /* Clear floats after the columns CONTROLLO*/
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*Immagine*/
+        #div {
+            width: auto;
+            height: 400px;
+        }
+
+        #div img {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        p.text {
+            text-align: justify;
+        }
+
+        .h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9eefb;
+        }
+
+        /*Passaggio mouse su UR*/
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Posizione tooltip */
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            right: 100%;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+
+        /* Footer */
+        .left {
+            text-align: left;
+            float: left;
+        }
+
+        .right {
+            float: right;
+            text-align: right;
+        }
+
+        .centered {
+            text-align: center;
+        }
